@@ -3,6 +3,7 @@ class HelloWorld extends React.Component {
     const continents = ['Africa', 'America', 'Asia','Australia', 'Europe'];
     const helloContinents = Array.from(continents, c => `Hello ${c}!`);
     const message = helloContinents.join(' ');
+
     return (
       <div title="Outer div">
       <h1>{message}</h1>
@@ -10,7 +11,7 @@ class HelloWorld extends React.Component {
     );
   }
 }
-\
+
 
 const element = <HelloWorld />;
 
