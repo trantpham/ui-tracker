@@ -9,5 +9,9 @@ Chapter 2: <br />
 ![Chapter 2 Screenshot:](https://github.ccs.neu.edu/NEU-CS5610-SU20/TranPham-Book/blob/master/Screenshot/Chapter%202%20screenshot.png)
 
 
-Chapter 3:
+Chapter 3:<br />
+** Functionality: For Chapter 3, I was able to build a website that tracks issues, similarly to JIRA, using React Components. The data is also able to pass to the children and create the nested element. <br />
+** Challenges: The book didn’t clearly explain when to use JavaScript, and when to use HTML/CSS—so I have to look up and gain high level background information on when to use each of the language. I’m also still trying to get comfortable with learning how to use the port and the commands for gitBash.
+
+
 ![Chapter 3 Screenshot:](https://github.ccs.neu.edu/NEU-CS5610-SU20/TranPham-Book/blob/master/Screenshot/Chapter%203%20screenshot.png)
