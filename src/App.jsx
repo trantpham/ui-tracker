@@ -23,8 +23,7 @@ class IssueFilter extends React.Component {
 
 
 
-class IssueRow extends React.Component {
-  render() {
+function IssueRow(props) {
     const issue = this.props.issue;
     return (
       <tr>
@@ -38,10 +37,8 @@ class IssueRow extends React.Component {
       </tr>
     );
   }
-}
 
-class IssueTable extends React.Component {
-  render() {
+function IssueTable(props) {
     const issueRows = this.props.issues.map(issue =>
       <IssueRow key={issue.id} issue={issue} />
     );
@@ -65,7 +62,6 @@ class IssueTable extends React.Component {
       </table>
     );
   }
-}
 
 
 
