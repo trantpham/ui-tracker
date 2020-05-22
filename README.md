@@ -3,6 +3,8 @@
 Comprises of screenshots from the book exercises
 
 Chapter 5: <br />
+![Chapter 5 Screenshot:](https://github.ccs.neu.edu/NEU-CS5610-SU20/TranPham-Book/blob/master/Screenshot/Chapter%205%20screenshot.png)
+
 
 
 Chapter 4:<br /><br /> 
