@@ -14,9 +14,9 @@
   "author": "Tran",
   "license": "ISC",
   "dependencies": {
-    "apollo-server-express": "^2.3.1",
+    "apollo-server-express": "^2.9.9",
     "express": "^4.17.1",
-    "graphql": "^0.13.2",
+    "graphql": "^14.6.0",
     "mongodb": "^3.5.7",
     "nodemon": "^1.19.4"
   }
