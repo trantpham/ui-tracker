@@ -1,3 +1,9 @@
+/* eslint "react/react-in-jsx-scope": "off" */
+/* globals React ReactDOM PropTypes */
+/* eslint "react/jsx-no-undef": "off" */
+/* eslint "react/no-multi-comp": "off" */
+/* eslint "no-alert": "off" */
+
 const dateRegex = new RegExp('^\\d\\d\\d\\d-\\d\\d-\\d\\d');
 
 function jsonDateReviver(key, value) {
@@ -82,6 +88,10 @@ class IssueAdd extends React.Component {
     );
   }
 }
+
+IssueAdd.propTypes = {
+  createIssue: PropTypes.func.isRequired,
+};
 
 async function graphQLFetch(query, variables = {}) {
   try {
