@@ -33,12 +33,21 @@ Chapter 7: <br />
 
 
 Chapter 6: <br />
+
+** Challenges: I had a lot of issues related to installing Mongo and utilizing Mongo making sure that it runs properly on my Windows computer. The book is very unclear in steps of utilizing MongoDB, what and how to use it. Installilng is fairly easy, but information on troubleshooting for Windows are very unclear. Additionally, there's a lot of solutions available online for Mac users, but for Windows, it's a bit unclear and has to do a lot of digging and playing around to figure out the problem. It'd be nice for the book to address how to tackle MongoDB issues on Windows. Other than that, utilizing MongoDB and syntax is fairly easy. 
 ![Chapter 6 Screenshot:](https://github.ccs.neu.edu/NEU-CS5610-SU20/TranPham-Book/blob/master/Screenshot/Chapter%206%20screenshot.png)
 
 
 
+
 Chapter 5: <br />
+
+** Challenges: I kept running into issues with installing the proper version of graphql. It was difficult to keep track of the correct npm command and the right graphql version, and therefore the server.js keeps crashing when trying to run. Afterwards, I was able to fix the issue by fixing the json file and upgrade to the correct graphql. The other issue I ran into was difficulty of keeping track of the right syntax from the graphQL, utilizing single quotes and double quotes, as well as spacing in the syntax.<br /> <br /> 
+
 ![Chapter 5 Screenshot:](https://github.ccs.neu.edu/NEU-CS5610-SU20/TranPham-Book/blob/master/Screenshot/Chapter%205%20screenshot.png)
+
+
+
 
 
 
