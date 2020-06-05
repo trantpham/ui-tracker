@@ -41,6 +41,8 @@ Chapter 6: <br />
 
 
 Chapter 5: <br />
+** Functionality: while we were introduced both concepts: REST and GraphQL, the book proceed with introducing the GraphQL libraries and tools for us to use in order to build the issue tracker tool. We now have a ListAPI that needed to intergrated into the UI. In order to do that, we need to make asynchronous API calls (Ajax calls). Afterwards, we converted the date/time appearance on the web by using scalar for the conversion--the the time will appear correctly according to timezones. Finally, we're making adjustment so the input data is more flexible and doesn't have to hard code the data in.
+
 
 ** Challenges: I kept running into issues with installing the proper version of graphql. It was difficult to keep track of the correct npm command and the right graphql version, and therefore the server.js keeps crashing when trying to run. Afterwards, I was able to fix the issue by fixing the json file and upgrade to the correct graphql. The other issue I ran into was difficulty of keeping track of the right syntax from the graphQL, utilizing single quotes and double quotes, as well as spacing in the syntax.<br /> <br /> 
 
