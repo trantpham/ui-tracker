@@ -31,6 +31,8 @@ Chapter 8: <br />
 Chapter 7: <br />
 ![Chapter 7 Screenshot:](https://github.ccs.neu.edu/NEU-CS5610-SU20/TranPham-Book/blob/master/Screenshot/Chapter%207%20screenshot.png)
 
+** Functionality: This chapter focuses on the architecture side of the app, reorganizing all the files that I've done in the past and splitting them to API and UI side. This also allows my app to run on multiple environment, having the UI server port and the API endpoint to call. We also then have ESLint, which checks for any codes that are potentially bugs, and check if the written codes follow the standard convention. ESLint is installed for both the API and the frontend--UI.
+** Challenges: I've ran into a lot of different issues in this chapter. Some of them are due to the edit and remove code to another files, the book is pretty unclear and it took so much time to trace back the errors. Then, after able to fix the files, I had issues on file dependency on the api side, and had to re-install node.js. Then, it's just the matter of fixing small errors and make sure the server connects on the UI side to run on localhost. 
 
 Chapter 6: <br />
 
