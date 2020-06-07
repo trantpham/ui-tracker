@@ -24,7 +24,9 @@ Chapter 10: <br />
 Chapter 9: <br />
 ** Functionality: In this chapter, I added a few UI functionalities to the website. The first functionality is the dropdown navigation bar that filter the status of all the bugs that were logged. The second one is the navigation bar on the top, in order to distinguish the report and the issue list. Then, I replaced all the <a> tags with <Link to> for the internal url and added some flare to the background color of the text in the index file. Lastly, the site also now has the browser history router to follow the paths of the URLs.<br />
 
-** Challenges: This section is also fairly easy for me to follow the concepts, since the functionalities were divided into section, so it is easier to follow the author's thoughts and changes. The struggle I had for this chapter is working with dependencies, and the parsing of the graphql query when using graphql version 14.6.0. The professor was helping me with figuring out the syntax to modify the code slightly, and parse the id string as int, like how it's supposed to be. <br />
+** Challenges: This section is also fairly easy for me to follow the concepts, since the functionalities were divided into section, so it is easier to follow the author's thoughts and changes. The struggle I had for this chapter is working with dependencies, and the parsing of the graphql query when using graphql version 14.6.0. The professor was helping me with figuring out the syntax to modify the code slightly, and parse the id string as int, like how it's supposed to be. <br /><br />
+
+
 ![Chapter 9 Screenshot:](https://github.ccs.neu.edu/NEU-CS5610-SU20/TranPham-Book/blob/master/Screenshot/chapter%209%20screenshot.png)
 
 
