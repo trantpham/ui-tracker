@@ -34,6 +34,7 @@ Chapter 7: <br />
 
 Chapter 6: <br />
 
+** Functionality: This chapter, the focus is mainly on understanding and utilizing MongoDB. The website is now linked the Mongo database and store any user information in it. The database allows CRUD: Create/Read/Update/Delete capability for data and information. The app has trymongo.js and a schema to init the mongo database. Then, whenever we want to add new database, we can just use the insert command in the mongo shell. 
 ** Challenges: I had a lot of issues related to installing Mongo and utilizing Mongo making sure that it runs properly on my Windows computer. The book is very unclear in steps of utilizing MongoDB, what and how to use it. Installilng is fairly easy, but information on troubleshooting for Windows are very unclear. Additionally, there's a lot of solutions available online for Mac users, but for Windows, it's a bit unclear and has to do a lot of digging and playing around to figure out the problem. It'd be nice for the book to address how to tackle MongoDB issues on Windows. Other than that, utilizing MongoDB and syntax is fairly easy. 
 ![Chapter 6 Screenshot:](https://github.ccs.neu.edu/NEU-CS5610-SU20/TranPham-Book/blob/master/Screenshot/Chapter%206%20screenshot.png)
 
