@@ -25,18 +25,27 @@ Chapter 9: <br />
 
 
 Chapter 8: <br />
+
+** Functionality: If chapter 7 is design following the architecture design and splitting into api and ui, then chapter 8 is focusing on a lot of reorganization of the files, splitting things up for better tracing in the future. It is basically split out each of the functions in api and ui into different files, and all that files as needed. The UI uses Webpack to determine application’s dependent modules and third party library dependencies
+
+** Challenges: This chapter is fairly easy to follow in terms of concept, however, the book code snippets are written in a way that is very difficult to follow in terms of what needs to be cut out. I spent a lof of time troubleshooting and finding typos, things that got left out that the book didnt' show, but was crucial to reorganize. 
+
 ![Chapter 8 Screenshot:](https://github.ccs.neu.edu/NEU-CS5610-SU20/TranPham-Book/blob/master/Screenshot/chapter%208%20screenshot.png)
 
 
 Chapter 7: <br />
+
+** Functionality: This chapter focuses on the architecture side of the app, reorganizing all the files that I've done in the past and splitting them to API and UI side. This also allows my app to run on multiple environment, having the UI server port and the API endpoint to call. We also then have ESLint, which checks for any codes that are potentially bugs, and check if the written codes follow the standard convention. ESLint is installed for both the API and the frontend--UI.<br /> 
+
+** Challenges: I've ran into a lot of different issues in this chapter. Some of them are due to the edit and remove code to another files, the book is pretty unclear and it took so much time to trace back the errors. Then, after able to fix the files, I had issues on file dependency on the api side, and had to re-install node.js. Then, it's just the matter of fixing small errors and make sure the server connects on the UI side to run on localhost. 
+
 ![Chapter 7 Screenshot:](https://github.ccs.neu.edu/NEU-CS5610-SU20/TranPham-Book/blob/master/Screenshot/Chapter%207%20screenshot.png)
 
-** Functionality: This chapter focuses on the architecture side of the app, reorganizing all the files that I've done in the past and splitting them to API and UI side. This also allows my app to run on multiple environment, having the UI server port and the API endpoint to call. We also then have ESLint, which checks for any codes that are potentially bugs, and check if the written codes follow the standard convention. ESLint is installed for both the API and the frontend--UI.
-** Challenges: I've ran into a lot of different issues in this chapter. Some of them are due to the edit and remove code to another files, the book is pretty unclear and it took so much time to trace back the errors. Then, after able to fix the files, I had issues on file dependency on the api side, and had to re-install node.js. Then, it's just the matter of fixing small errors and make sure the server connects on the UI side to run on localhost. 
+
 
 Chapter 6: <br />
 
-** Functionality: This chapter, the focus is mainly on understanding and utilizing MongoDB. The website is now linked the Mongo database and store any user information in it. The database allows CRUD: Create/Read/Update/Delete capability for data and information. The app has trymongo.js and a schema to init the mongo database. Then, whenever we want to add new database, we can just use the insert command in the mongo shell. 
+** Functionality: This chapter, the focus is mainly on understanding and utilizing MongoDB. The website is now linked the Mongo database and store any user information in it. The database allows CRUD: Create/Read/Update/Delete capability for data and information. The app has trymongo.js and a schema to init the mongo database. Then, whenever we want to add new database, we can just use the insert command in the mongo shell. <br /> 
 ** Challenges: I had a lot of issues related to installing Mongo and utilizing Mongo making sure that it runs properly on my Windows computer. The book is very unclear in steps of utilizing MongoDB, what and how to use it. Installilng is fairly easy, but information on troubleshooting for Windows are very unclear. Additionally, there's a lot of solutions available online for Mac users, but for Windows, it's a bit unclear and has to do a lot of digging and playing around to figure out the problem. It'd be nice for the book to address how to tackle MongoDB issues on Windows. Other than that, utilizing MongoDB and syntax is fairly easy. 
 ![Chapter 6 Screenshot:](https://github.ccs.neu.edu/NEU-CS5610-SU20/TranPham-Book/blob/master/Screenshot/Chapter%206%20screenshot.png)
 
@@ -44,7 +53,7 @@ Chapter 6: <br />
 
 
 Chapter 5: <br />
-** Functionality: while we were introduced both concepts: REST and GraphQL, the book proceed with introducing the GraphQL libraries and tools for us to use in order to build the issue tracker tool. We now have a ListAPI that needed to intergrated into the UI. In order to do that, we need to make asynchronous API calls (Ajax calls). Afterwards, we converted the date/time appearance on the web by using scalar for the conversion--the the time will appear correctly according to timezones. Finally, we're making adjustment so the input data is more flexible and doesn't have to hard code the data in.
+** Functionality: while we were introduced both concepts: REST and GraphQL, the book proceed with introducing the GraphQL libraries and tools for us to use in order to build the issue tracker tool. We now have a ListAPI that needed to intergrated into the UI. In order to do that, we need to make asynchronous API calls (Ajax calls). Afterwards, we converted the date/time appearance on the web by using scalar for the conversion--the the time will appear correctly according to timezones. Finally, we're making adjustment so the input data is more flexible and doesn't have to hard code the data in.<br /> 
 
 
 ** Challenges: I kept running into issues with installing the proper version of graphql. It was difficult to keep track of the correct npm command and the right graphql version, and therefore the server.js keeps crashing when trying to run. Afterwards, I was able to fix the issue by fixing the json file and upgrade to the correct graphql. The other issue I ran into was difficulty of keeping track of the right syntax from the graphQL, utilizing single quotes and double quotes, as well as spacing in the syntax.<br /> <br /> 
