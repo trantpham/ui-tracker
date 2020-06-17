@@ -19,6 +19,8 @@ Chapter 11: <br />
 
 
 Chapter 10: <br />
+![Chapter 10_1 Screenshot:](https://github.ccs.neu.edu/NEU-CS5610-SU20/TranPham-Book/blob/master/Screenshot/Chapter%2010_1%20screenshot.png) </br>
+![Chapter 10_2 Screenshot:](https://github.ccs.neu.edu/NEU-CS5610-SU20/TranPham-Book/blob/master/Screenshot/Chapter%2010_2%20screenshot.png)
 
 
 Chapter 9: <br />
