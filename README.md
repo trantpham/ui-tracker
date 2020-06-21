@@ -16,9 +16,17 @@ Chapter 12: <br />
 
 
 Chapter 11: <br />
+** Functionality: This chapter is fairly long, but mostly is updating styling and add more small here and there functionalities that increase user's experience using Bootstrap library. Each of the existing functionalities have stlyized buttons and a clear navigation bar. The screen is now also allows screen size optimization, and we'll be able to view the site in different screen size. The last two main implemented features are a toast message when an issue is updated successfully popping up, and the create issue button that lives on the navigation bar so users can create a new issue anywhere.
+
+
+** Challenges: I encountered a similar issue like chapter 7 with parsing the 'id' in as integer instead of string in IssueEdit. It was a bit time consuming for me and professor to troubleshoot and find out the issue. However, once figure out the issue, it was an easy fix. Other than that, I didnt' run into any troubles as applying the Bootstrap library to the features was very fun and easy. 
 ![Chapter 11 Screenshot:](https://github.ccs.neu.edu/NEU-CS5610-SU20/TranPham-Book/blob/master/Screenshot/Chapter%2011%20screenshot.png) </br>
 
 Chapter 10: <br />
+** Functionality: In this chapter, the user can now have input in data for: text, date, and number onto the site. The time reflects current time of the user for accuracy. We also have delete button, following the CRUD model--> allowing users to create, read in the data, update, and delete the issues. 
+
+
+** Challenges: I don't think I ran into any issues for this chapter. Mostly is still the same issue with following the book's flow and author's writing. I don't think I'd be able to get used to the book flow, despite reaching chapter 10. There was a lot of inconsistency in styling that make things confusing. And so I had to cross check with his github instead of based the code on the book.
 ![Chapter 10_1 Screenshot:](https://github.ccs.neu.edu/NEU-CS5610-SU20/TranPham-Book/blob/master/Screenshot/Chapter%2010_1%20screenshot.png) </br>
 ![Chapter 10_2 Screenshot:](https://github.ccs.neu.edu/NEU-CS5610-SU20/TranPham-Book/blob/master/Screenshot/Chapter%2010_2%20screenshot.png)
 
