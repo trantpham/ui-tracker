@@ -22,7 +22,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "fd4127edc28a4bdc9264";
+/******/ 	var hotCurrentHash = "cb645f1e933b2c4bc298";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -1046,6 +1046,10 @@ function template(body) {
 <body>
 <!-- Page generated from template. -->
   <div id="contents">${body}</div>
+  
+    <script src="/env.js"></script>
+  <script src="/vendor.bundle.js"></script>
+  <script src="/app.bundle.js"></script>
 
 </body>
 
