@@ -4,18 +4,20 @@ import { StaticRouter, matchPath } from 'react-router-dom';
 
 import Page from '../src/Page.jsx';
 import template from './template.js';
-
 import store from '../src/store.js';
 import routes from '../src/routes.js';
 
 async function render(req, res) {
-  const activeRoute - routes.find(
-	 route => matchPath(req.path, route),
+  const activeRoute = routes.find(
+    route => matchPath(req.path, route),
   );
+
   let initialData;
   if (activeRoute && activeRoute.component.fetchData) {
-    initialData = await activeRoute.component.fetchData();
+    const match = matchPath(req.path, activeRoute);
+    initialData = await activeRoute.component.fetchData(match);
   }
+
   store.initialData = initialData;
   const element = (
     <StaticRouter location={req.url} context={{}}>

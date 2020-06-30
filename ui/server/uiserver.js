@@ -53,8 +53,6 @@ app.get('*', (req, res, next) => {
   render(req, res, next);
 });
 
-
-
 const port = process.env.UI_SERVER_PORT || 8000;
 
 app.listen(port, () => {
