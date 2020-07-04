@@ -1,4 +1,3 @@
-  
 import serialize from 'serialize-javascript';
 
 export default function template(body, data) {
