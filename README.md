@@ -13,7 +13,9 @@ Chapter 13: <br />
 
 
 Chapter 12: <br />
+** Funtionality: This chapter we use React to generate isomorphic applications and use server and client to create HTML and DOM. We created new directory organization system: browser, server, and src folder. We now have API call the data and render on the server, and use data detcher with search and parameter 
 
+** Challenges: This chapter is very frustrating and filled with typos and errors and missing punctuations. In general, I just spent a lot of time cross checking the book and for errors and not even spend time to debug. 
 
 Chapter 11: <br />
 ** Functionality: This chapter is fairly long, but mostly is updating styling and add more small here and there functionalities that increase user's experience using Bootstrap library. Each of the existing functionalities have stlyized buttons and a clear navigation bar. The screen is now also allows screen size optimization, and we'll be able to view the site in different screen size. The last two main implemented features are a toast message when an issue is updated successfully popping up, and the create issue button that lives on the navigation bar so users can create a new issue anywhere.
