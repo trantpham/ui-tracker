@@ -99,7 +99,7 @@ export default class IssueEdit extends React.Component {
     }`;
 
     const { id, created, ...changes } = issue;
-    const data = await graphQLFetch(query, { changes, id: parseInt(id, 10) }, this.showError);
+    const data = await graphQLFetch(query, { changes, id }, this.showError);
     if (data) {
       this.setState({ issue: data.issueUpdate });
       this.showSuccess('Updated issue successfully');
