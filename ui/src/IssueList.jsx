@@ -65,7 +65,6 @@ class IssueList extends React.Component {
     };
     this.closeIssue = this.closeIssue.bind(this);
     this.deleteIssue = this.deleteIssue.bind(this);
- 
   }
 
   componentDidMount() {
@@ -100,7 +99,7 @@ class IssueList extends React.Component {
       }
     }`;
     const { issues } = this.state;
-	const { showError } = this.props;
+    const { showError } = this.props;
     const data = await graphQLFetch(query, { id: issues[index].id },
       showError);
     if (data) {
@@ -121,7 +120,7 @@ class IssueList extends React.Component {
     const { issues } = this.state;
     const { location: { pathname, search }, history } = this.props;
     const { id } = issues[index];
-	const { showSuccess, showError } = this.props;
+    const { showSuccess, showError } = this.props;
     const data = await graphQLFetch(query, { id }, showError);
     if (data && data.issueDelete) {
       this.setState((prevState) => {
@@ -137,7 +136,6 @@ class IssueList extends React.Component {
       this.loadData();
     }
   }
-
 
 
   render() {
@@ -162,7 +160,7 @@ class IssueList extends React.Component {
           deleteIssue={this.deleteIssue}
         />
         <IssueDetail issue={selectedIssue} />
- 
+
       </React.Fragment>
     );
   }

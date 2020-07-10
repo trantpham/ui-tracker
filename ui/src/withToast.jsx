@@ -1,5 +1,6 @@
 import React from 'react';
 import Toast from './Toast.jsx';
+
 export default function withToast(OriginalComponent) {
   return class ToastWrapper extends React.Component {
     constructor(props) {
@@ -11,15 +12,19 @@ export default function withToast(OriginalComponent) {
       this.showError = this.showError.bind(this);
       this.dismissToast = this.dismissToast.bind(this);
     }
+
     showSuccess(message) {
       this.setState({ toastVisible: true, toastMessage: message, toastType: 'success' });
     }
+
     showError(message) {
       this.setState({ toastVisible: true, toastMessage: message, toastType: 'danger' });
     }
+
     dismissToast() {
       this.setState({ toastVisible: false });
     }
+
     render() {
       const { toastType, toastVisible, toastMessage } = this.state;
       return (

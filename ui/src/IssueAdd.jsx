@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Form, FormControl, FormGroup, ControlLabel, Button,
+import {
+  Form, FormControl, FormGroup, ControlLabel, Button,
 } from 'react-bootstrap';
 
 export default class IssueAdd extends React.Component {
@@ -25,9 +26,8 @@ export default class IssueAdd extends React.Component {
   render() {
     return (
       <Form inline name="issueAdd" onSubmit={this.handleSubmit}>
-   
-      <FormGroup>
-	  <ControlLabel>Owner:</ControlLabel>
+        <FormGroup>
+          <ControlLabel>Owner:</ControlLabel>
           {' '}
           <FormControl type="text" name="owner" />
         </FormGroup>
@@ -39,7 +39,7 @@ export default class IssueAdd extends React.Component {
         </FormGroup>
         {' '}
         <Button bsStyle="primary" type="submit">Add</Button>
-		</Form>
+      </Form>
     );
   }
 }
