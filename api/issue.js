@@ -23,7 +23,7 @@ async function list(_, {
     if (effortMax !== undefined) filter.effort.$lte = effortMax;
   }
 
-	if (search) filter.$text = { $search: search };
+  if (search) filter.$text = { $search: search };
 
   const cursor = db.collection('issues').find(filter)
     .sort({ id: 1 })
