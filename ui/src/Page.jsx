@@ -27,7 +27,7 @@ function NavBar() {
           <NavItem>Report</NavItem>
         </LinkContainer>
       </Nav>
-	  <Col sm={5}>
+      <Col sm={5}>
         <Navbar.Form>
           <Search />
         </Navbar.Form>
