@@ -22,7 +22,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "a546582e9d042ec1d7f4";
+/******/ 	var hotCurrentHash = "1880dde9212c64bb9497";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -1016,10 +1016,12 @@ async function render(req, res) {
     const match = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["matchPath"])(req.path, activeRoute);
     const index = req.url.indexOf('?');
     const search = index !== -1 ? req.url.substr(index) : null;
-    initialData = await activeRoute.component.fetchData(match, search);
+    initialData = await activeRoute.component.fetchData(match, search, req.headers.cookie);
   }
 
+  const userData = await _src_Page_jsx__WEBPACK_IMPORTED_MODULE_3__["default"].fetchData(req.headers.cookie);
   _src_store_js__WEBPACK_IMPORTED_MODULE_5__["default"].initialData = initialData;
+  _src_store_js__WEBPACK_IMPORTED_MODULE_5__["default"].userData = userData;
   const context = {};
   const element = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["StaticRouter"], {
     location: req.url,
@@ -1030,7 +1032,7 @@ async function render(req, res) {
   if (context.url) {
     res.redirect(301, context.url);
   } else {
-    res.send(Object(_template_js__WEBPACK_IMPORTED_MODULE_4__["default"])(body, initialData));
+    res.send(Object(_template_js__WEBPACK_IMPORTED_MODULE_4__["default"])(body, initialData, userData));
   }
 }
 
@@ -1051,7 +1053,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var serialize_javascript__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! serialize-javascript */ "serialize-javascript");
 /* harmony import */ var serialize_javascript__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(serialize_javascript__WEBPACK_IMPORTED_MODULE_0__);
 
-function template(body, data) {
+function template(body, initialData, userData) {
   return `<!DOCTYPE HTML>
 <html>
 <head>
@@ -1059,9 +1061,7 @@ function template(body, data) {
   <title>Pro MERN Stack</title>
   <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" >
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-   <script src="https://apis.google.com/js/api:client.js"></script>
-  
+  <script src="https://apis.google.com/js/api:client.js"></script>
   <style>
     table.table-hover tr {cursor: pointer;}
     .panel-title a {display: block; width: 100%; cursor: pointer;}
@@ -1070,7 +1070,10 @@ function template(body, data) {
 <body>
   <!-- Page generated from template. -->
   <div id="contents">${body}</div>
-  <script>window.__INITIAL_DATA__ = ${serialize_javascript__WEBPACK_IMPORTED_MODULE_0___default()(data)}</script>
+  <script>
+    window.__INITIAL_DATA__ = ${serialize_javascript__WEBPACK_IMPORTED_MODULE_0___default()(initialData)}
+    window.__USER_DATA__ = ${serialize_javascript__WEBPACK_IMPORTED_MODULE_0___default()(userData)}
+  </script>
   <script src="/env.js"></script>
   <script src="/vendor.bundle.js"></script>
   <script src="/app.bundle.js"></script>
@@ -2794,6 +2797,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _SignInNavItem_jsx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./SignInNavItem.jsx */ "./src/SignInNavItem.jsx");
 /* harmony import */ var _Search_jsx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Search.jsx */ "./src/Search.jsx");
 /* harmony import */ var _UserContext_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./UserContext.js */ "./src/UserContext.js");
+/* harmony import */ var _graphQLFetch_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./graphQLFetch.js */ "./src/graphQLFetch.js");
+/* harmony import */ var _store_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./store.js */ "./src/store.js");
+
+
 
 
 
@@ -2845,33 +2852,35 @@ function Footer() {
 }
 
 class Page extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
+  static async fetchData(cookie) {
+    const query = `query { user {
+      signedIn givenName
+    }}`;
+    const data = await Object(_graphQLFetch_js__WEBPACK_IMPORTED_MODULE_8__["default"])(query, null, null, cookie);
+    return data;
+  }
+
   constructor(props) {
     super(props);
+    const user = _store_js__WEBPACK_IMPORTED_MODULE_9__["default"].userData ? _store_js__WEBPACK_IMPORTED_MODULE_9__["default"].userData.user : null;
+    delete _store_js__WEBPACK_IMPORTED_MODULE_9__["default"].userData;
     this.state = {
-      user: {
-        signedIn: false
-      }
+      user
     };
     this.onUserChange = this.onUserChange.bind(this);
   }
 
   async componentDidMount() {
-    const apiEndpoint = window.ENV.UI_AUTH_ENDPOINT;
-    const response = await fetch(`${apiEndpoint}/user`, {
-      method: 'POST'
-    });
-    const body = await response.text();
-    const result = JSON.parse(body);
     const {
-      signedIn,
-      givenName
-    } = result;
-    this.setState({
-      user: {
-        signedIn,
-        givenName
-      }
-    });
+      user
+    } = this.state;
+
+    if (user == null) {
+      const data = await Page.fetchData();
+      this.setState({
+        user: data.user
+      });
+    }
   }
 
   onUserChange(user) {
@@ -2884,6 +2893,7 @@ class Page extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
     const {
       user
     } = this.state;
+    if (user == null) return null;
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavBar, {
       user: user,
       onUserChange: this.onUserChange
@@ -3042,6 +3052,7 @@ class SigninNavItem extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Compone
       const apiEndpoint = window.ENV.UI_AUTH_ENDPOINT;
       const response = await fetch(`${apiEndpoint}/signin`, {
         method: 'POST',
+        credentials: 'include',
         headers: {
           'Content-Type': 'application/json'
         },
@@ -3075,7 +3086,8 @@ class SigninNavItem extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Compone
 
     try {
       await fetch(`${apiEndpoint}/signout`, {
-        method: 'POST'
+        method: 'POST',
+        credentials: 'include'
       });
       const auth2 = window.gapi.auth2.getAuthInstance();
       await auth2.signOut();
