@@ -28,6 +28,8 @@ const server = new ApolloServer({
     console.log(error);
     return error;
   },
+  playground: true,
+  introspction: true,
 });
 
 function installHandler(app) {
