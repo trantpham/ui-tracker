@@ -7,13 +7,17 @@ Chapter 15: <br />
 
 
 Chapter 14: <br />
+** Functionality: In this chapter, we integrated the Google API into the website, and changed the web domain to ui.promerstack:8000 link. We also enable cookies to remember the user login and restricting the web features when the user haven't logged in yet.
 
+** Challenges: I didn't run into any major issue, except for smaller details like managing the OAuth side on Google and remember to whitelist the page.
+
+![Chapter 13 Screenshot:](https://github.ccs.neu.edu/NEU-CS5610-SU20/TranPham-Book/blob/chapter14/Screenshot/Chapter%2014_1%20screenshot.png) </br>
 
 Chapter 13: <br />
 NOTE: FOR CHAPTER 13, PLEASE USE TAG `Chapter13-Correct` FOR THE RELEASE
 ** Functionality: In this chapter we added some more features to the site, especially elaborating on the Report tab from the nav bar and the Report site. We added new Toast file as well as edited the existing Toast. We added more MongoDB users by including a script in API, and then working on the Search in the nav bar, where users can just search any activities/descriptions, name, and issue ID. The report page is where it shows all the users with the current status of all the issues reported.
 
-** Challenges: This chapter was working for me until I ran into issue with $text query parsing in MongoDB and didn't realize I have to reset MongoDb by running `mongo issuetracker scripts/init.mongo.js` first before running `mongo issuetracker scripts/generate_data.mongo.js`.
+<br>** Challenges: This chapter was working for me until I ran into issue with $text query parsing in MongoDB and didn't realize I have to reset MongoDb by running `mongo issuetracker scripts/init.mongo.js` first before running `mongo issuetracker scripts/generate_data.mongo.js`. </br>
 ![Chapter 13 Screenshot:](https://github.ccs.neu.edu/NEU-CS5610-SU20/TranPham-Book/blob/chapter13/Screenshot/Chapter%2013_1%20screenshot.png) </br>
 
 ![Chapter 13 Screenshot:](https://github.ccs.neu.edu/NEU-CS5610-SU20/TranPham-Book/blob/chapter13/Screenshot/Chapter%2013_2%20screenshot.png) </br>
