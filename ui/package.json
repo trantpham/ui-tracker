@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "10.x",
+    "npm": "6.x"
+  },
   "scripts": {
     "#start": "UI server. HMR is enabled in dev mode.",
     "start": "node dist/server.js",
@@ -15,6 +19,8 @@
     "#dev-all": "Dev mode: watch for server changes and start UI server",
     "dev-all": "rm dist/* && npm run watch-server-hmr & sleep 5 && npm start"
   },
+  "heroku-postbuild": "npm run compile && ln -fs ../node_modules/bootstrap/dist
+    public/bootstrap"
   "author": "Tran",
   "license": "ISC",
   "dependencies": {
