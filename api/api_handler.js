@@ -15,8 +15,8 @@ const resolvers = {
   Mutation: {
     setAboutMessage: about.setMessage,
     issueAdd: issue.add,
-	issueUpdate: issue.update,
-	issueDelete: issue.delete,
+    issueUpdate: issue.update,
+    issueDelete: issue.delete,
   },
   GraphQLDate,
 };
@@ -28,6 +28,8 @@ const server = new ApolloServer({
     console.log(error);
     return error;
   },
+  playground: true,
+  introspction: true,
 });
 
 function installHandler(app) {
