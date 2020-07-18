@@ -2,9 +2,9 @@ const { UserInputError } = require('apollo-server-express');
 const { getDb, getNextSequence } = require('./db.js');
 
 async function get(_, { id }) {
-	const db = getDb();
-	const issue = await db.collection('issues').findOne({ id });
-	return issue;
+  const db = getDb();
+  const issue = await db.collection('issues').findOne({ id });
+  return issue;
 }
 
 
@@ -17,7 +17,7 @@ async function list(_, { status, effortMin, effortMax }) {
     if (effortMin !== undefined) filter.effort.$gte = effortMin;
     if (effortMax !== undefined) filter.effort.$lte = effortMax;
   }
-  
+
   const issues = await db.collection('issues').find(filter).toArray();
   return issues;
 }
@@ -74,4 +74,6 @@ async function remove(_, { id }) {
   return false;
 }
 
-module.exports = { list, add, get, update, delete: remove, };
+module.exports = {
+  list, add, get, update, delete: remove,
+};
